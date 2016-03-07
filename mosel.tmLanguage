@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>mos</string>
+	</array>
+	<key>name</key>
+	<string>Mosel</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>Single line comments</string>
+			<key>match</key>
+			<string>!.*</string>
+			<key>name</key>
+			<string>comment.line.mosel</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Standard library utility functions</string>
+			<key>match</key>
+			<string>fopen|fclose|writeln|write</string>
+			<key>name</key>
+			<string>entity.name.function.mosel</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Control flow keywords</string>
+			<key>match</key>
+			<string>\sforall(?=[(| (])|\sdo\s|\send-do\s|\sif(?=[(| (])|\sthen\s|\selif(?=[(| (])|\selse\s|\send-if\s|\scase\s|\sof\s|\send-case\s|\swhile(?=[(| (])|\srepeat(?=[(| (])|\suntil\s|\sbreak\s|\snext\s|\suses\s|\soptions\s|(?&lt;=[ |(])sum(?=[(| (])|(?&lt;=[ |(])prod(?=[(| (])|(?&lt;=[ |(])min(?=[(| (])|(?&lt;=[ |(])max(?=[(| (])</string>
+			<key>name</key>
+			<string>keyword.control.mosel</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Weird keywords</string>
+			<key>match</key>
+			<string>declarations|end-declarations|parameters|end-parameters|initializations|end-initializations|record|end-record</string>
+			<key>name</key>
+			<string>keyword.other.mosel</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>in, from and arithmetic operators</string>
+			<key>match</key>
+			<string>\sin\s|\sfrom\s|\+|-|/|\*|&lt;=|&gt;=|&lt;|&gt;|:=|=</string>
+			<key>name</key>
+			<string>keyword.operator.mosel</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Plain old numbers only preceded by whitespace or an arithmetic operator</string>
+			<key>match</key>
+			<string>(?&lt;=[ +-/\*=()])[0-9]*</string>
+			<key>name</key>
+			<string>constant.numeric.mosel</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Primitive types (model is a storage type because it holds information about the program)</string>
+			<key>match</key>
+			<string>integer|real|string|boolean|mpvar|linctr|\smodel\s|end-model|array</string>
+			<key>name</key>
+			<string>storage.type.mosel</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>String literals</string>
+			<key>match</key>
+			<string>"[^"]*"</string>
+			<key>name</key>
+			<string>string.quoted.double.mosel</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.mosel</string>
+	<key>uuid</key>
+	<string>fe976c10-d954-49a2-b654-a11b2d50b836</string>
+</dict>
+</plist>
